@@ -16,7 +16,7 @@ function transpose(array) {
       }
     }
   }
-
+  return output;
 }
 
 module.exports = transpose;
