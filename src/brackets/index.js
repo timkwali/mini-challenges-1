@@ -6,6 +6,7 @@
  */
 function isValid(str) {
   str = [...str];
+  let numberOfCharacters = str.length;
   let openBrackets = ["(", "[", "{"];
   let closeBrackets = [")", "]", "}"];
   let numberOfOpenBrackets = {};
@@ -15,7 +16,7 @@ function isValid(str) {
     for(let i = 0; i < str.length; i++) {
       if(openBrackets.includes(str[i])) {
         (!numberOfOpenBrackets[`${str[i]}`]) ?
-        numberOfOpenBrackets[`${str[i]}`] = 1 
+        numberOfOpenBrackets[`${str[i]}`] = 1
         : numberOfOpenBrackets[`${str[i]}`]++;
       }
     }
@@ -25,7 +26,7 @@ function isValid(str) {
     for(let i = 0; i < str.length; i++) {
       if(closeBrackets.includes(str[i])) {
         (!numberOfCloseBrackets[`${str[i]}`]) ?
-        numberOfCloseBrackets[`${str[i]}`] = 1 
+        numberOfCloseBrackets[`${str[i]}`] = 1
         : numberOfCloseBrackets[`${str[i]}`]++;
       }
     }
